@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sula | Fact Verification, Media Bias & Claim Telemetry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="mist-overlay"></div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="brand-group">
+                <div class="ornament-crest">
+                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="18,3 33,18 18,33 3,18" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                        <polygon points="18,8 28,18 18,28 8,18" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" fill="none"/>
+                        <circle cx="18" cy="18" r="3.5" fill="currentColor"/>
+                        <line x1="18" y1="3" x2="18" y2="8" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="18" y1="28" x2="18" y2="33" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="3" y1="18" x2="8" y2="18" stroke="currentColor" stroke-width="1.5"/>
+                        <line x1="28" y1="18" x2="33" y2="18" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div>
+                    <h1 class="brand-title">SULA TRUTH TELEMETRY</h1>
+                    <p class="brand-tagline">Institutional Fact Grounding (WHO / UN / NASA) & Target-Stance Media Bias Mapping</p>
+                </div>
+            </div>
+            
+            <div class="header-meta">
+                <span class="meta-badge"><i class="dot"></i> Verified Authorities (WHO / UN / NASA)</span>
+                <span class="meta-badge"><i class="dot gold"></i> Dynamic Media Bias Spectrum</span>
+            </div>
+        </div>
+        <div class="loom-border"></div>
+    </header>
+
+    <main class="main-container">
+        <!-- Navigation Tabs -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="tab-text">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Text Inspector
+            </button>
+            <button class="tab-btn" data-tab="tab-url">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                Live URL Scanner
+            </button>
+            <button class="tab-btn" data-tab="tab-samples">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                Live Internet Presets
+            </button>
+            <button class="tab-btn" data-tab="tab-benchmarks">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                Model Accuracy & Architecture
+            </button>
+        </nav>
+
+        <div class="content-grid">
+            <!-- Left Input Column -->
+            <section class="input-panel card">
+                <!-- Tab 1: Text Inspector -->
+                <div id="tab-text" class="tab-content active">
+                    <div class="panel-header">
+                        <h2>Examine Article Text & Stated Claims</h2>
+                        <p>Evaluates factual claims against institutional data points, checks for half-truths, and analyzes political stance</p>
+                    </div>
+                    <form id="form-verify-text">
+                        <div class="form-group">
+                            <label for="input-title">Headline / Title <span class="opt">(Optional)</span></label>
+                            <input type="text" id="input-title" placeholder="e.g. Health researchers announce clinical oncology results...">
+                        </div>
+                        <div class="form-group">
+                            <label for="input-body">Article Body Content <span class="req">*</span></label>
+                            <textarea id="input-body" rows="9" placeholder="Paste news article, press release, or editorial text here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" id="btn-submit-text">
+                            <span>Verify Stated Claims & Bias</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Tab 2: Live URL Scanner -->
+                <div id="tab-url" class="tab-content">
+                    <div class="panel-header">
+                        <h2>Live News URL Scanner</h2>
+                        <p>Scrapes live online news portals and validates claims against official records in real-time</p>
+                    </div>
+                    <form id="form-verify-url">
+                        <div class="form-group">
+                            <label for="input-url">Web Article URL <span class="req">*</span></label>
+                            <input type="url" id="input-url" placeholder="https://www.bbc.com/news/... or Reuters / Times link" required>
+                        </div>
+                        <button type="submit" class="btn-primary" id="btn-submit-url">
+                            <span>Ingest & Examine URL</span>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Tab 3: Dynamic Live Presets -->
+                <div id="tab-samples" class="tab-content">
+                    <div class="panel-header flex-between">
+                        <div>
+                            <h2>Live Real-World Test Presets</h2>
+                            <p>Dynamically connected to internet feeds (Neutral, Clickbait, Conspiracy, Pseudoscience, Biased Editorials)</p>
+                        </div>
+                        <button type="button" class="btn-refresh" id="btn-refresh-presets">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                            Refresh Feeds
+                        </button>
+                    </div>
+                    <div id="samples-list" class="samples-container"></div>
+                </div>
+
+                <!-- Tab 4: Model Architecture & Research Benchmark -->
+                <div id="tab-benchmarks" class="tab-content">
+                    <div class="panel-header">
+                        <h2>Model Performance & Research Metrics</h2>
+                        <p>Empirical evaluation of the ML architectures supporting your Major Project submission</p>
+                    </div>
+                    <div class="benchmark-info-box">
+                        <h4>Why Comparative Model Evaluation?</h4>
+                        <p>For academic major project evaluations and research publications, standard practice requires benchmarking the proposed <strong>Hybrid Stacking Ensemble</strong> against standard baselines (Logistic Regression, Random Forest, XGBoost) to prove statistically significant improvement in deception detection.</p>
+                    </div>
+                    <div id="benchmark-table-container"></div>
+                </div>
+            </section>
+
+            <!-- Right Results Column -->
+            <section class="results-panel card" id="results-container">
+                <div class="empty-state" id="empty-state">
+                    <div class="empty-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                    </div>
+                    <h3>Telemetry Ready</h3>
+                    <p>Enter article text or select a dynamic live preset on the left to generate the multi-layer claim verification report.</p>
+                </div>
+
+                <div class="loading-state hidden" id="loading-state">
+                    <div class="spinner"></div>
+                    <p>Cross-referencing WHO, UN, NASA & Wikipedia records, validating stated claims, and analyzing target-stance bias...</p>
+                </div>
+
+                <div class="report-content hidden" id="report-view">
+                    <!-- Top Verdict Ribbon -->
+                    <div class="verdict-banner" id="verdict-banner">
+                        <div class="verdict-main">
+                            <span class="verdict-badge" id="badge-verdict">AUTHENTIC</span>
+                            <h3 class="verdict-headline" id="disp-title">Article Analysis Complete</h3>
+                        </div>
+                        <div class="score-circle-container">
+                            <div class="score-circle" id="score-circle">
+                                <span class="score-val" id="disp-score">98.5</span>
+                                <span class="score-lbl">Credibility %</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 1. Stated Claim-by-Claim Line Verification Table -->
+                    <div class="section-card">
+                        <div class="section-title-bar">
+                            <h4>Claim-by-Claim Line Verification (Supported vs Refuted Data Points)</h4>
+                            <span class="tag-status" id="disp-fact-status">Factually Grounded</span>
+                        </div>
+                        <div id="claim-verification-table-container">
+                            <!-- Injected Line Verification Cards -->
+                        </div>
+
+                        <!-- Wikipedia Entity Summary -->
+                        <div id="wiki-grounding-card" class="wiki-card hidden">
+                            <div class="wiki-icon"><span>W</span></div>
+                            <div class="wiki-body">
+                                <h5 id="wiki-title">Wikipedia Encyclopedia Context</h5>
+                                <p id="wiki-summary"></p>
+                                <a id="wiki-link" href="#" target="_blank" class="wiki-btn">View Wikipedia Record ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Target-Stance Media Bias & Factuality 2D Matrix -->
+                    <div class="section-card">
+                        <div class="section-title-bar">
+                            <h4>Media Bias & Factuality 2D Spectrum</h4>
+                            <span class="tag-status" id="disp-allsides-rating">Center / Balanced</span>
+                        </div>
+                        
+                        <div class="stance-callout" id="disp-stance-summary">
+                            <strong>Target Stance:</strong> Objective Factual Discourse
+                        </div>
+
+                        <!-- 2D Bias Grid -->
+                        <div class="bias-chart-container">
+                            <div class="bias-chart-header">
+                                <span class="chart-y-axis-label">▲ High Factuality & Institutional Evidence</span>
+                            </div>
+                            <div class="bias-chart-grid" id="bias-chart-grid">
+                                <div class="chart-zone zone-left"><span>LEFT</span></div>
+                                <div class="chart-zone zone-lean-left"><span>LEAN LEFT</span></div>
+                                <div class="chart-zone zone-center"><span>CENTER</span></div>
+                                <div class="chart-zone zone-lean-right"><span>LEAN RIGHT</span></div>
+                                <div class="chart-zone zone-right"><span>RIGHT</span></div>
+                                
+                                <div class="chart-pin" id="chart-pin" style="left: 50%; top: 20%;">
+                                    <div class="pin-pulse"></div>
+                                    <div class="pin-label" id="pin-label">Analyzed Article</div>
+                                </div>
+                            </div>
+                            <div class="bias-chart-footer">
+                                <span class="chart-x-left">◄ Progressive / Left</span>
+                                <span class="chart-y-low">▼ Low Factuality / High Distortion</span>
+                                <span class="chart-x-right">Conservative / Right ►</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Logical Fallacy Analysis -->
+                    <div class="section-card">
+                        <div class="section-title-bar">
+                            <h4>Logical Fallacy & Rhetorical Distortion Engine</h4>
+                            <span class="tag-status warn" id="disp-fallacy-index">0 Fallacies Detected</span>
+                        </div>
+                        <div id="fallacy-cards-container" class="fallacy-list"></div>
+                    </div>
+
+                    <!-- 4. Mathematical Tone & Bias Metrics -->
+                    <div class="section-card">
+                        <div class="section-title-bar">
+                            <h4>Author Tone & Bias Mathematical Indices</h4>
+                        </div>
+                        <div class="metrics-grid">
+                            <div class="metric-box">
+                                <span class="m-label">Composite Bias Score (ABS)</span>
+                                <span class="m-value" id="val-abs">12.4 <small>/100</small></span>
+                                <span class="m-sub" id="sub-abs">Objective</span>
+                            </div>
+                            <div class="metric-box">
+                                <span class="m-label">Subjectivity Index (S_idx)</span>
+                                <span class="m-value" id="val-subj">18.2%</span>
+                                <span class="m-sub">Opinion ratio</span>
+                            </div>
+                            <div class="metric-box">
+                                <span class="m-label">Emotional Hyperbole (EHF)</span>
+                                <span class="m-value" id="val-ehf">0.0%</span>
+                                <span class="m-sub" id="sub-ehf">0 Sensational words</span>
+                            </div>
+                            <div class="metric-box">
+                                <span class="m-label">Hedging & Uncertainty (HUR)</span>
+                                <span class="m-value" id="val-hur">5.0%</span>
+                                <span class="m-sub" id="sub-hur">Unverified claims</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Linguistic & Readability -->
+                    <div class="section-card">
+                        <div class="section-title-bar">
+                            <h4>Linguistic Complexity & Readability</h4>
+                        </div>
+                        <div class="readability-row">
+                            <div class="read-item">
+                                <span class="r-val" id="val-fre">54.2</span>
+                                <span class="r-lbl">Flesch Reading Ease</span>
+                            </div>
+                            <div class="read-item">
+                                <span class="r-val" id="val-fkgl">Grade 11.2</span>
+                                <span class="r-lbl">Flesch-Kincaid Level</span>
+                            </div>
+                            <div class="read-item">
+                                <span class="r-val" id="val-gfi">13.5</span>
+                                <span class="r-lbl">Gunning Fog Index</span>
+                            </div>
+                            <div class="read-item">
+                                <span class="r-val" id="val-ttr">0.68</span>
+                                <span class="r-lbl">Lexical Diversity (TTR)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Sentence Deception Attribution -->
+                    <div class="section-card" id="flagged-card">
+                        <div class="section-title-bar">
+                            <h4>Sentence-Level Deception Highlights</h4>
+                        </div>
+                        <div class="flagged-list" id="flagged-list"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="loom-border"></div>
+        <div class="footer-inner">
+            <p>Designed for academic rigor, transparent institutional verification, and Scopus research excellence.</p>
+            <p class="copyright">Department of Computer Science & Engineering | Major Project 2026–27</p>
+        </div>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
