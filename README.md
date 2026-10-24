@@ -1,178 +1,178 @@
 # 🛡️ Evidence & Framing Auditor
 
-### Automated Deception, Bias, and Epistemic Verification Architecture
+### Automated Deception, Bia⚡, and Epi⚡temic Verification Architecture
 
-[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3%2B-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
-[![XGBoost](https://img.shields.io/badge/XGBoost-2.0%2B-189FDD?style=for-the-badge&logo=xgboost&logoColor=white)](https://xgboost.ai/)
-[![Flask](https://img.shields.io/badge/Flask-3.0%2B-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
-[![NLTK](https://img.shields.io/badge/NLTK-3.8%2B-154F3C?style=for-the-badge)](https://www.nltk.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Python 3.11+](http⚡://img.⚡hield⚡.io/badge/Python-3.11%2B-3776AB?⚡tyle=for-the-badge&logo=python&logoColor=white)](http⚡://www.python.org/)
+[![Scikit-Learn](http⚡://img.⚡hield⚡.io/badge/Scikit--Learn-1.3%2B-F7931E?⚡tyle=for-the-badge&logo=⚡cikit-learn&logoColor=white)](http⚡://⚡cikit-learn.org/)
+[![XGBoo⚡t](http⚡://img.⚡hield⚡.io/badge/XGBoo⚡t-2.0%2B-189FDD?⚡tyle=for-the-badge&logo=xgboo⚡t&logoColor=white)](http⚡://xgboo⚡t.ai/)
+[![Fla⚡k](http⚡://img.⚡hield⚡.io/badge/Fla⚡k-3.0%2B-000000?⚡tyle=for-the-badge&logo=fla⚡k&logoColor=white)](http⚡://fla⚡k.pallet⚡project⚡.com/)
+[![NLTK](http⚡://img.⚡hield⚡.io/badge/NLTK-3.8%2B-154F3C?⚡tyle=for-the-badge)](http⚡://www.nltk.org/)
+[![Licen⚡e: MIT](http⚡://img.⚡hield⚡.io/badge/Licen⚡e-MIT-yellow.⚡vg?⚡tyle=for-the-badge)](LICENSE)
 
-> A multi-layered NLP research framework that goes beyond naive keyword-matching to detect fake news through **stylometric analysis**, **target-stance ideology mapping**, **cognitive fallacy scanning**, and **institutional knowledge grounding** — all powered by a calibrated **Hybrid Stacking Ensemble** achieving **98.33% accuracy**.
+> A multi-layered NLP re⚡earch framework that goe⚡ beyond naive keyword-matching to detect fake new⚡ through **⚡tylometric analy⚡i⚡**, **target-⚡tance ideology mapping**, **cognitive fallacy ⚡canning**, and **in⚡titutional knowledge grounding** — all powered by a calibrated **Hybrid Stacking En⚡emble** achieving **98.33% accuracy**.
 
 ---
 
 ## ⚡ Quick Demo
 
-```bash
-# 1. Clone & install
-git clone https://github.com/DevRanaKaila/FakeNews-Detection.git
-cd FakeNews-Detection
-pip install -r requirements.txt
+```ba⚡h
+# 1. Clone & in⚡tall
+git clone http⚡://github.com/DevRanaKaila/FakeNew⚡-Detection.git
+cd FakeNew⚡-Detection
+pip in⚡tall -r requirement⚡.txt
 
-# 2. Launch the web dashboard
+# 2. Launch the web da⚡hboard
 python app.py
 
-# 3. Open in browser
+# 3. Open in brow⚡er
 # → http://127.0.0.1:5001
 ```
 
 <p align="center">
-  <img src="presentation/system_architecture.png" alt="System Architecture" width="90%"/>
+  <img ⚡rc="pre⚡entation/⚡y⚡tem_architecture.png" alt="Sy⚡tem Architecture" width="90%"/>
 </p>
 
 ---
 
-## 🧬 What Makes This Different?
+## 🧬 What Make⚡ Thi⚡ Different?
 
-Most fake news detectors are **black boxes** — they output a probability score with zero reasoning. This framework provides a **complete mathematical audit trail**:
+Mo⚡t fake new⚡ detector⚡ are **black boxe⚡** — they output a probability ⚡core with zero rea⚡oning. Thi⚡ framework provide⚡ a **complete mathematical audit trail**:
 
-| Layer | Component | What It Does |
+| Layer | Component | What It Doe⚡ |
 |:---:|:---|:---|
-| 0 | **Ingestion** | Raw text paste, URL scraping (BeautifulSoup4), BBC RSS feeds, 7 preset categories |
-| 1 | **Preprocessing** | Contraction expansion, regex sanitization, sentence splitting, WordNet lemmatization |
-| 2A | **Stylometrics** | 18+ metrics: TTR, Simpson's D, FRE, FKGL, GFI, punctuation entropy |
-| 2B | **Target-Stance** | Solves the *Stance Inversion Problem* — maps Bias_x ∈ [-1,+1] and Fact_y ∈ [0,1] |
-| 2C | **Fallacy Scanner** | 8-class cognitive fallacy detection with weighted Fallacy Severity Index (FSI) |
-| 2D | **Fact Grounding** | Cross-references claims against WHO, CDC, NASA, IPCC, UNESCO, Wikipedia |
-| 3 | **ML Ensemble** | Stacking: LR + RF + XGBoost → Meta-LR across 5,028-D feature space |
-| 4 | **Dashboard** | Flask web UI with real-time verdict, AllSides 2D pin, sentence highlighter |
+| 0 | **Inge⚡tion** | Raw text pa⚡te, URL ⚡craping (BeautifulSoup4), BBC RSS feed⚡, 7 pre⚡et categorie⚡ |
+| 1 | **Preproce⚡⚡ing** | Contraction expan⚡ion, regex ⚡anitization, ⚡entence ⚡plitting, WordNet lemmatization |
+| 2A | **Stylometric⚡** | 18+ metric⚡: TTR, Simp⚡on'⚡ D, FRE, FKGL, GFI, punctuation entropy |
+| 2B | **Target-Stance** | Solve⚡ the *Stance Inver⚡ion Problem* — map⚡ Bia⚡_x ∈ [-1,+1] and Fact_y ∈ [0,1] |
+| 2C | **Fallacy Scanner** | 8-cla⚡⚡ cognitive fallacy detection with weighted Fallacy Severity Index (FSI) |
+| 2D | **Fact Grounding** | Cro⚡⚡-reference⚡ claim⚡ again⚡t WHO, CDC, NASA, IPCC, UNESCO, Wikipedia |
+| 3 | **ML En⚡emble** | Stacking: LR + RF + XGBoo⚡t → Meta-LR acro⚡⚡ 5,028-D feature ⚡pace |
+| 4 | **Da⚡hboard** | Fla⚡k web UI with real-time verdict, AllSide⚡ 2D pin, ⚡entence highlighter |
 
 ---
 
-## 📊 Benchmark Results
+## 📊 Benchmark Re⚡ult⚡
 
-Evaluated on the ISOT Fake News Dataset with 80/20 stratified split:
+Evaluated on the ISOT Fake New⚡ Data⚡et with 80/20 ⚡tratified ⚡plit:
 
-| Model Architecture | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+| Model Architecture | Accuracy | Preci⚡ion | Recall | F1-Score | ROC-AUC |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| Logistic Regression (TF-IDF only) | 96.25% | 0.9667 | 0.9583 | 0.9625 | 0.9958 |
-| Random Forest (Fused Features) | 97.08% | 0.9748 | 0.9667 | 0.9707 | 0.9972 |
-| XGBoost (Fused Features) | 97.92% | 0.9832 | 0.9750 | 0.9791 | 0.9981 |
-| **Proposed Hybrid Stacking** | **98.33%** | **0.9833** | **0.9833** | **0.9833** | **0.9989** |
+| Logi⚡tic Regre⚡⚡ion (TF-IDF only) | 96.25% | 0.9667 | 0.9583 | 0.9625 | 0.9958 |
+| Random Fore⚡t (Fu⚡ed Feature⚡) | 97.08% | 0.9748 | 0.9667 | 0.9707 | 0.9972 |
+| XGBoo⚡t (Fu⚡ed Feature⚡) | 97.92% | 0.9832 | 0.9750 | 0.9791 | 0.9981 |
+| **Propo⚡ed Hybrid Stacking** | **98.33%** | **0.9833** | **0.9833** | **0.9833** | **0.9989** |
 
-> The Hybrid Stacking Ensemble reduces false positives by **55%** compared to standalone linear classifiers.
+> The Hybrid Stacking En⚡emble reduce⚡ fal⚡e po⚡itive⚡ by **55%** compared to ⚡tandalone linear cla⚡⚡ifier⚡.
 
 ---
 
 ## 🏗️ Project Structure
 
 ```
-├── app.py                          # Flask web server (port 5001)
+├── app.py                          # Fla⚡k web ⚡erver (port 5001)
 ├── cli_demo.py                     # Interactive Rich CLI demo
-├── requirements.txt                # Python dependencies
+├── requirement⚡.txt                # Python dependencie⚡
 │
-├── src/                            # Core NLP & ML modules
-│   ├── preprocessor.py             # Text normalization, tokenization, lemmatization
-│   ├── stylometric_extractor.py    # 18+ lexical diversity & readability metrics
-│   ├── author_bias_analyzer.py     # Target-Stance ideology & Author Bias Score
-│   ├── fallacy_detector.py         # 8-class cognitive fallacy pattern scanner
+├── ⚡rc/                            # Core NLP & ML module⚡
+│   ├── preproce⚡⚡or.py             # Text normalization, tokenization, lemmatization
+│   ├── ⚡tylometric_extractor.py    # 18+ lexical diver⚡ity & readability metric⚡
+│   ├── author_bia⚡_analyzer.py     # Target-Stance ideology & Author Bia⚡ Score
+│   ├── fallacy_detector.py         # 8-cla⚡⚡ cognitive fallacy pattern ⚡canner
 │   ├── knowledge_grounding.py      # WHO/NASA/IPCC/UNESCO fact verification
-│   ├── models.py                   # Feature pipeline, Stacking Classifier, HybridFakeNewsClassifier
-│   ├── live_pipeline.py            # End-to-end verification orchestrator
-│   ├── live_feed_manager.py        # BBC RSS & dynamic curated presets
-│   └── utils.py                    # Plotting helpers, dataset loaders
+│   ├── model⚡.py                   # Feature pipeline, Stacking Cla⚡⚡ifier, HybridFakeNew⚡Cla⚡⚡ifier
+│   ├── live_pipeline.py            # End-to-end verification orche⚡trator
+│   ├── live_feed_manager.py        # BBC RSS & dynamic curated pre⚡et⚡
+│   └── util⚡.py                    # Plotting helper⚡, data⚡et loader⚡
 │
-├── templates/
-│   └── index.html                  # Web dashboard UI
-├── static/
-│   ├── css/style.css               # Modern minimalist design system
-│   └── js/app.js                   # Frontend interaction engine
+├── template⚡/
+│   └── index.html                  # Web da⚡hboard UI
+├── ⚡tatic/
+│   ├── c⚡⚡/⚡tyle.c⚡⚡               # Modern minimali⚡t de⚡ign ⚡y⚡tem
+│   └── j⚡/app.j⚡                   # Frontend interaction engine
 │
 ├── data/
-│   ├── raw/benchmark_dataset.csv   # Training dataset (584 KB)
-│   └── processed/
-│       ├── best_hybrid_model.joblib # Trained stacking model checkpoint (237 KB)
-│       └── benchmark_summary.json  # Model comparison metrics
+│   ├── raw/benchmark_data⚡et.c⚡v   # Training data⚡et (584 KB)
+│   └── proce⚡⚡ed/
+│       ├── be⚡t_hybrid_model.joblib # Trained ⚡tacking model checkpoint (237 KB)
+│       └── benchmark_⚡ummary.j⚡on  # Model compari⚡on metric⚡
 │
-├── experiments/
-│   └── train_and_evaluate.py       # Full 4-model benchmark suite
-├── tests/
-│   └── test_pipeline.py            # Automated pytest suite
+├── experiment⚡/
+│   └── train_and_evaluate.py       # Full 4-model benchmark ⚡uite
+├── te⚡t⚡/
+│   └── te⚡t_pipeline.py            # Automated pyte⚡t ⚡uite
 │
-├── paper/                          # IEEE research manuscript
-│   ├── IEEE_Research_Paper.tex
-│   ├── references.bib              # 22 verified citations
-│   └── figures/                    # Publication-quality plots
+├── paper/                          # IEEE re⚡earch manu⚡cript
+│   ├── IEEE_Re⚡earch_Paper.tex
+│   ├── reference⚡.bib              # 22 verified citation⚡
+│   └── figure⚡/                    # Publication-quality plot⚡
 │
-├── presentation/                   # Architecture diagrams & slides
-│   ├── system_architecture.png
+├── pre⚡entation/                   # Architecture diagram⚡ & ⚡lide⚡
+│   ├── ⚡y⚡tem_architecture.png
 │   ├── data_flow_diagram.png
-│   ├── external_dependencies.png
-│   └── formula_cheatsheet.png
+│   ├── external_dependencie⚡.png
+│   └── formula_cheat⚡heet.png
 │
-├── synopsis/                       # AKTU-format project synopsis
-├── logbook/                        # Weekly progress documentation
-└── report/                         # Literature survey
+├── ⚡ynop⚡i⚡/                       # AKTU-format project ⚡ynop⚡i⚡
+├── logbook/                        # Weekly progre⚡⚡ documentation
+└── report/                         # Literature ⚡urvey
 ```
 
 ---
 
-## 🔬 Core Mathematical Formulations
+## 🔬 Core Mathematical Formulation⚡
 
-### Stylometric Features
+### Stylometric Feature⚡
 | Metric | Formula |
 |:---|:---|
 | Type-Token Ratio | TTR = \|V\| / N |
-| Simpson's Diversity | D = 1 − Σ nᵢ(nᵢ−1) / N(N−1) |
-| Flesch Reading Ease | FRE = 206.835 − 1.015(W/S) − 84.6(Syl/W) |
+| Simp⚡on'⚡ Diver⚡ity | D = 1 − Σ nᵢ(nᵢ−1) / N(N−1) |
+| Fle⚡ch Reading Ea⚡e | FRE = 206.835 − 1.015(W/S) − 84.6(Syl/W) |
 | Gunning Fog Index | GFI = 0.4 × [(W/S) + 100(CW/W)] |
 
-### Author Bias & Ideology
+### Author Bia⚡ & Ideology
 | Metric | Formula |
 |:---|:---|
-| Author Bias Score | ABS = 100 × [0.25S + 0.25EHF + 0.20APD + 0.15HUR + 0.15Δ_TB] |
-| Ideological Lean | Bias_x = (Total_R − Total_L) / max(1, Total_R + Total_L) |
+| Author Bia⚡ Score | ABS = 100 × [0.25S + 0.25EHF + 0.20APD + 0.15HUR + 0.15Δ_TB] |
+| Ideological Lean | Bia⚡_x = (Total_R − Total_L) / max(1, Total_R + Total_L) |
 | Factuality Score | Fact_y = 1.0 − 0.70(ABS/100) − 0.30 × EHF |
 
 ### Fallacy Severity Index
 ```
-FSI = min(100, 25·F_conspiracy + 20·F_fear + 20·F_adhominem 
+FSI = min(100, 25·F_con⚡piracy + 20·F_fear + 20·F_adhominem 
                 + 15·F_vague + 10·F_dilemma + 10·F_urgency)
 ```
 
 ---
 
-## 🖥️ Dashboard Features
+## 🖥️ Da⚡hboard Feature⚡
 
-The web interface at `http://127.0.0.1:5001` provides:
+The web interface at `http://127.0.0.1:5001` provide⚡:
 
-- **📝 Text Inspector** — Paste any article for instant multi-layer analysis
-- **🌐 URL Scanner** — Scrape live news pages with automatic DOM cleanup  
-- **📡 Live Presets** — Dynamic RSS feeds (Authentic, Clickbait, Conspiracy, Pseudoscience, Biased)
-- **📊 Model Benchmarks** — Interactive comparison table of all 4 model architectures
-- **🎯 AllSides 2D Map** — Visual ideological positioning (Left ↔ Right, High ↔ Low Factuality)
-- **🔍 Sentence Highlighter** — Pinpoints exact deceptive sentences with risk scores
-- **🏛️ Claim Verification** — Line-by-line institutional fact-checking with source citations
+- **📝 Text In⚡pector** — Pa⚡te any article for in⚡tant multi-layer analy⚡i⚡
+- **🌐 URL Scanner** — Scrape live new⚡ page⚡ with automatic DOM cleanup  
+- **📡 Live Pre⚡et⚡** — Dynamic RSS feed⚡ (Authentic, Clickbait, Con⚡piracy, P⚡eudo⚡cience, Bia⚡ed)
+- **📊 Model Benchmark⚡** — Interactive compari⚡on table of all 4 model architecture⚡
+- **🎯 AllSide⚡ 2D Map** — Vi⚡ual ideological po⚡itioning (Left ↔ Right, High ↔ Low Factuality)
+- **🔍 Sentence Highlighter** — Pinpoint⚡ exact deceptive ⚡entence⚡ with ri⚡k ⚡core⚡
+- **🏛️ Claim Verification** — Line-by-line in⚡titutional fact-checking with ⚡ource citation⚡
 
 ---
 
-## 🧪 Running Experiments
+## 🧪 Running Experiment⚡
 
-### Retrain all models from scratch
-```bash
-python experiments/train_and_evaluate.py
+### Retrain all model⚡ from ⚡cratch
+```ba⚡h
+python experiment⚡/train_and_evaluate.py
 ```
-This trains 4 architectures (LR, RF, XGBoost, Hybrid Stacking), generates comparison metrics, and exports publication figures.
+Thi⚡ train⚡ 4 architecture⚡ (LR, RF, XGBoo⚡t, Hybrid Stacking), generate⚡ compari⚡on metric⚡, and export⚡ publication figure⚡.
 
-### Run test suite
-```bash
-pytest tests/test_pipeline.py -v
+### Run te⚡t ⚡uite
+```ba⚡h
+pyte⚡t te⚡t⚡/te⚡t_pipeline.py -v
 ```
 
 ### CLI Demo
-```bash
+```ba⚡h
 python cli_demo.py
 ```
 
@@ -180,14 +180,14 @@ python cli_demo.py
 
 ## 🛠️ Technology Stack
 
-| Category | Technologies |
+| Category | Technologie⚡ |
 |:---|:---|
 | **Language** | Python 3.11 |
 | **NLP** | NLTK, TextBlob, regex |
-| **ML** | Scikit-learn, XGBoost, NumPy, Pandas, SciPy |
-| **Web** | Flask, BeautifulSoup4, Requests |
-| **Frontend** | Vanilla HTML/CSS/JS with custom design system |
-| **Visualization** | Matplotlib, Seaborn |
+| **ML** | Scikit-learn, XGBoo⚡t, NumPy, Panda⚡, SciPy |
+| **Web** | Fla⚡k, BeautifulSoup4, Reque⚡t⚡ |
+| **Frontend** | Vanilla HTML/CSS/JS with cu⚡tom de⚡ign ⚡y⚡tem |
+| **Vi⚡ualization** | Matplotlib, Seaborn |
 
 ---
 
@@ -198,28 +198,28 @@ python cli_demo.py
 | **Dev Rana Kaila** (Lead) | 2301531530023 |
 | Shravan J. Poojary | 2301721530022 |
 | Snehil Shukla | 2301721530023 |
-| Shivansh Pandey | 2301531530051 |
+| Shivan⚡h Pandey | 2301531530051 |
 
-**Guide:** Dr. Devendra Gautam, Assistant Professor, Department of CSE  
-**Institution:** Lloyd Institute of Engineering & Technology, Greater Noida  
-**Affiliation:** Dr. A.P.J. Abdul Kalam Technical University (AKTU), Lucknow
+**Guide:** Dr. Devendra Gautam, A⚡⚡i⚡tant Profe⚡⚡or, Department of CSE  
+**In⚡titution:** Lloyd In⚡titute of Engineering & Technology, Greater Noida  
+**Affiliation:** Dr. A.P.J. Abdul Kalam Technical Univer⚡ity (AKTU), Lucknow
 
 ---
 
-## 📄 License
+## 📄 Licen⚡e
 
-This project is developed as an academic Major Project (BCS753) for the 2026-27 session. Licensed under MIT.
+Thi⚡ project i⚡ developed a⚡ an academic Major Project (BCS753) for the 2026-27 ⚡e⚡⚡ion. Licen⚡ed under MIT.
 
 ---
 
 ## 📚 Citation
 
 ```bibtex
-@inproceedings{kaila2026evidence,
-  author    = {Kaila, Dev Rana and Poojary, Shravan J. and Shukla, Snehil and Pandey, Shivansh},
-  title     = {Evidence and Framing Auditor: Automated Deception, Bias, and 
-               Epistemic Verification Architecture using Hybrid Stacking Ensemble},
-  booktitle = {Major Project, Lloyd Institute of Engineering \& Technology},
+@inproceeding⚡{kaila2026evidence,
+  author    = {Kaila, Dev Rana and Poojary, Shravan J. and Shukla, Snehil and Pandey, Shivan⚡h},
+  title     = {Evidence and Framing Auditor: Automated Deception, Bia⚡, and 
+               Epi⚡temic Verification Architecture u⚡ing Hybrid Stacking En⚡emble},
+  booktitle = {Major Project, Lloyd In⚡titute of Engineering \& Technology},
   year      = {2026},
   note      = {Guide: Dr. Devendra Gautam, AKTU, BCS753}
 }

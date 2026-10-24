@@ -5,6 +5,9 @@ with formatted diagnostic gauges, credibility meters, and author bias breakdowns
 """
 import os
 import sys
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+    sys.stderr.reconfigure(encoding='utf-8', errors='replace')
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
@@ -14,7 +17,7 @@ from rich.text import Text
 from src.live_pipeline import LiveVerificationPipeline
 from src.models import HybridFakeNewsClassifier
 
-console = Console()
+console = Console(force_terminal=True, legacy_windows=False)
 
 def print_banner():
     banner_text = Text()
@@ -55,7 +58,10 @@ def render_verification_report(report: dict):
     table_bias.add_column("Calculated Value", style="bold white", justify="center")
     table_bias.add_column("Interpretation / Qualitative Stance", style="italic yellow", justify="left")
     
-    table_bias.add_row("Composite Author Bias Score (ABS)", f"{bias['author_bias_score']}/100", f"[{bias['bias_color']}]{bias['bias_level']}[/{bias['bias_color']}]")
+    bias_level = bias.get('bias_level', bias.get('allsides_rating', bias.get('stance_summary', 'Neutral / Balanced')))
+    bias_color = bias.get('bias_color', 'green' if ('Center' in bias_level or 'Balanced' in bias_level) else 'yellow')
+    abs_score = bias.get('author_bias_score', 0)
+    table_bias.add_row("Composite Author Bias Score (ABS)", f"{abs_score:.2f}/100" if isinstance(abs_score, (int, float)) else f"{abs_score}/100", f"[{bias_color}]{bias_level}[/{bias_color}]")
     table_bias.add_row("Affective Tone / Sentiment", bias['tone_sentiment'], "Overall emotional valence")
     table_bias.add_row("Subjectivity Index (S_idx)", f"{bias['subjectivity_pct']}%", "Ratio of opinion adjectives vs facts")
     table_bias.add_row("Emotional Hyperbole Factor (EHF)", f"{bias['sensationalism_pct']}%", f"{bias['sensational_word_count']} Sensational / Exaggerated words")
@@ -81,7 +87,7 @@ def render_verification_report(report: dict):
         console.print("\n[bold red][!] Suspicious / Hyperbolic Passages Flagged for Review:[/bold red]")
         for item in flagged:
             reasons_str = ", ".join(item["reasons"])
-            console.print(f"  [bold yellow]• Sentence #{item['sentence_idx']}:[/bold yellow] "{item['sentence_text']}"")
+            console.print(f"  [bold yellow]• Sentence #{item['sentence_idx']}:[/bold yellow] \"{item['sentence_text']}\"")
             console.print(f"    [dim red]→ Reasons: {reasons_str} (Deception Risk: {item['risk_score']})[/dim red]")
     else:
         console.print("\n[bold green][✓] No high-risk deceptive linguistic passages detected.[/bold green]")
@@ -91,7 +97,7 @@ def main():
     print_banner()
     
     # Initialize Pipeline
-    model_path = os.path.join("data", "processed", "best_hybrid_model.joblib")
+    model_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "processed", "best_hybrid_model.joblib")
     if os.path.exists(model_path):
         console.print(f"[bold green]✓ Loading Pre-Trained Hybrid Stacking Model from {model_path}...[/bold green]")
         pipeline = LiveVerificationPipeline(model_path=model_path)
