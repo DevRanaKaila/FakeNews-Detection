@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sula | Fact Verification, Media Bias & Claim Telemetry</title>
+    <title>Evidence & Framing Auditor | Automated Deception, Bias & Epistemic Verification</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -28,14 +28,15 @@
                     </svg>
                 </div>
                 <div>
-                    <h1 class="brand-title">SULA TRUTH TELEMETRY</h1>
-                    <p class="brand-tagline">Institutional Fact Grounding (WHO / UN / NASA) & Target-Stance Media Bias Mapping</p>
+                    <h1 class="brand-title">EVIDENCE & FRAMING AUDITOR</h1>
+                    <p class="brand-tagline">Automated Deception, Bias & Epistemic Verification Architecture • AKTU BCS753</p>
                 </div>
             </div>
             
             <div class="header-meta">
-                <span class="meta-badge"><i class="dot"></i> Verified Authorities (WHO / UN / NASA)</span>
-                <span class="meta-badge"><i class="dot gold"></i> Dynamic Media Bias Spectrum</span>
+                <span class="meta-badge"><i class="dot"></i> WHO / NASA / IPCC Grounding</span>
+                <span class="meta-badge"><i class="dot gold"></i> AllSides 2D Stance</span>
+                <span class="meta-badge"><i class="dot accent"></i> 98.33% Stacking ML</span>
             </div>
         </div>
         <div class="loom-border"></div>
@@ -71,6 +72,17 @@
                         <h2>Examine Article Text & Stated Claims</h2>
                         <p>Evaluates factual claims against institutional data points, checks for half-truths, and analyzes political stance</p>
                     </div>
+
+                    <!-- Quick Pre-fill Chips for Instant Viva Demonstrations -->
+                    <div class="quick-samples-box">
+                        <span class="quick-samples-label">⚡ Quick Test Presets (Click to Auto-fill):</span>
+                        <div class="quick-chips-row">
+                            <button type="button" class="chip-btn" id="chip-real">🔬 Authentic Science (NASA)</button>
+                            <button type="button" class="chip-btn" id="chip-fake">🚨 Conspiracy Disinformation</button>
+                            <button type="button" class="chip-btn" id="chip-bias">⚖️ Partisan Editorial</button>
+                        </div>
+                    </div>
+
                     <form id="form-verify-text">
                         <div class="form-group">
                             <label for="input-title">Headline / Title <span class="opt">(Optional)</span></label>
@@ -80,10 +92,13 @@
                             <label for="input-body">Article Body Content <span class="req">*</span></label>
                             <textarea id="input-body" rows="9" placeholder="Paste news article, press release, or editorial text here..." required></textarea>
                         </div>
-                        <button type="submit" class="btn-primary" id="btn-submit-text">
-                            <span>Verify Stated Claims & Bias</span>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </button>
+                        <div style="display: flex; gap: 0.75rem;">
+                            <button type="submit" class="btn-primary" id="btn-submit-text" style="flex: 1;">
+                                <span>Verify Stated Claims & Bias</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </button>
+                            <button type="button" class="btn-export" id="btn-clear-text" title="Clear text form">Clear</button>
+                        </div>
                     </form>
                 </div>
 
@@ -168,6 +183,22 @@
                         </div>
                     </div>
 
+                    <!-- Export and Copy Bar -->
+                    <div class="export-bar">
+                        <button type="button" class="btn-export" id="btn-copy-report">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            Copy Summary
+                        </button>
+                        <button type="button" class="btn-export" id="btn-download-json">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Export JSON
+                        </button>
+                        <button type="button" class="btn-export" id="btn-download-txt">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                            Export TXT Audit
+                        </button>
+                    </div>
+
                     <!-- 1. Stated Claim-by-Claim Line Verification Table -->
                     <div class="section-card">
                         <div class="section-title-bar">
@@ -243,21 +274,25 @@
                             <div class="metric-box">
                                 <span class="m-label">Composite Bias Score (ABS)</span>
                                 <span class="m-value" id="val-abs">12.4 <small>/100</small></span>
+                                <div class="metric-progress"><div class="metric-progress-fill" id="prog-abs" style="width: 12.4%;"></div></div>
                                 <span class="m-sub" id="sub-abs">Objective</span>
                             </div>
                             <div class="metric-box">
                                 <span class="m-label">Subjectivity Index (S_idx)</span>
                                 <span class="m-value" id="val-subj">18.2%</span>
+                                <div class="metric-progress"><div class="metric-progress-fill sage" id="prog-subj" style="width: 18.2%;"></div></div>
                                 <span class="m-sub">Opinion ratio</span>
                             </div>
                             <div class="metric-box">
                                 <span class="m-label">Emotional Hyperbole (EHF)</span>
                                 <span class="m-value" id="val-ehf">0.0%</span>
+                                <div class="metric-progress"><div class="metric-progress-fill amber" id="prog-ehf" style="width: 0%;"></div></div>
                                 <span class="m-sub" id="sub-ehf">0 Sensational words</span>
                             </div>
                             <div class="metric-box">
                                 <span class="m-label">Hedging & Uncertainty (HUR)</span>
                                 <span class="m-value" id="val-hur">5.0%</span>
+                                <div class="metric-progress"><div class="metric-progress-fill crimson" id="prog-hur" style="width: 5%;"></div></div>
                                 <span class="m-sub" id="sub-hur">Unverified claims</span>
                             </div>
                         </div>
@@ -300,11 +335,14 @@
         </div>
     </main>
 
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">Action completed successfully</div>
+
     <footer class="site-footer">
         <div class="loom-border"></div>
         <div class="footer-inner">
-            <p>Designed for academic rigor, transparent institutional verification, and Scopus research excellence.</p>
-            <p class="copyright">Department of Computer Science & Engineering | Major Project 2026–27</p>
+            <p><strong>Evidence & Framing Auditor</strong> — Automated Deception, Bias, and Epistemic Verification Architecture.</p>
+            <p class="copyright">Department of Computer Science & Engineering | Major Project (AKTU / LIET Greater Noida) | Dev Rana Kaila (2301531530023)</p>
         </div>
     </footer>
 

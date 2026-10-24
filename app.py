@@ -23,6 +23,14 @@ feed_manager = LiveFeedManager()
 def index():
     return render_template('index.html')
 
+@app.route('/api/health', methods=['GET'])
+def health():
+    return jsonify({
+        "status": "healthy",
+        "service": "Evidence & Framing Auditor Telemetry Engine",
+        "model_loaded": os.path.exists(MODEL_PATH)
+    }), 200
+
 @app.route('/api/verify-text', methods=['POST'])
 def verify_text():
     data = request.get_json(force=True)
@@ -72,7 +80,22 @@ def get_benchmark_stats():
     if os.path.exists(summary_path):
         with open(summary_path, 'r', encoding='utf-8') as f:
             stats = json.load(f)
-        return jsonify(stats), 200
+
+        clean_benchmarks = []
+        raw_list = stats if isinstance(stats, list) else stats.get('benchmarks', [])
+        for item in raw_list:
+            clean_benchmarks.append({
+                "model_name": item.get("model_name", "unknown"),
+                "display_name": item.get("display_name", item.get("model_name", "")),
+                "accuracy": item.get("accuracy", 0.0),
+                "precision": item.get("precision", 0.0),
+                "recall": item.get("recall", 0.0),
+                "f1_score": item.get("f1_score", 0.0),
+                "macro_f1": item.get("macro_f1", 0.0),
+                "roc_auc": item.get("roc_auc", 0.0),
+                "train_time_sec": item.get("train_time_sec", 0.0)
+            })
+        return jsonify({"benchmarks": clean_benchmarks}), 200
     return jsonify({"benchmarks": []}), 200
 
 if __name__ == '__main__':
